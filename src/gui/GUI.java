@@ -18,6 +18,7 @@ public class GUI {
         
         GameBoard gameboard = new GameBoard();
         SetupDialog setupDialog = new SetupDialog();
+
         
     }
     

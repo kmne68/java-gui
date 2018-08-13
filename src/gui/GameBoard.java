@@ -26,6 +26,10 @@ public class GameBoard extends JFrame {
         GameGraphics gameGraphics = new GameGraphics();
         this.getContentPane().add(gameGraphics);
         
+                
+        GamePanel gamePanel = new GamePanel();
+        this.add(gamePanel);
+        
         this.setVisible(true);
     }
 }
