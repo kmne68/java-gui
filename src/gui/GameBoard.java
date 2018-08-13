@@ -22,6 +22,10 @@ public class GameBoard extends JFrame {
         this.getContentPane().setSize(800, 800);
         this.setTitle("Game GUI");
         this.setBounds(250, 250, 800, 800);
+        
+        GameGraphics gameGraphics = new GameGraphics();
+        this.getContentPane().add(gameGraphics);
+        
         this.setVisible(true);
     }
 }

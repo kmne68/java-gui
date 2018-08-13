@@ -17,6 +17,7 @@ public class GUI {
     public static void main(String[] args) {
         
         GameBoard gameboard = new GameBoard();
+        SetupDialog setupDialog = new SetupDialog();
         
     }
     
