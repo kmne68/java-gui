@@ -14,5 +14,7 @@ public class AppMain {
     public static void main(String[] args) {
         
         BorderLayoutDemo bld = new BorderLayoutDemo();
+        
+        BoxLayoutDemo boxlayout = new BoxLayoutDemo();
     }
 }
