@@ -16,5 +16,7 @@ public class AppMain {
         BorderLayoutDemo bld = new BorderLayoutDemo();
         
         BoxLayoutDemo boxlayout = new BoxLayoutDemo();
+        
+        CardLayoutDemo cardlayout = new CardLayoutDemo();
     }
 }
