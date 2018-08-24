@@ -36,8 +36,7 @@ public class CardLayoutDemo extends JFrame {
         JPanel pnl1 = new JPanel();     // any layout may be used here
         JPanel pnl2 = new JPanel();     // any layout may be used here
      
-        // create buttons
-                
+        // create buttons                
         btn1 = new JButton("Button 1");
         btn2 = new JButton("Button 2");
         btn3 = new JButton("Button 3");

@@ -17,8 +17,10 @@ public class AppMain {
 //        
 //        BoxLayoutDemo boxlayout = new BoxLayoutDemo();
 //        
-//        CardLayoutDemo cardlayout = new CardLayoutDemo();
-        
+//        CardLayoutDemo cardlayout = new CardLayoutDemo();   
+//
+//        FlowLayoutDemo flowlayout = new FlowLayoutDemo();
+
         GridLayoutDemo gridlayout = new GridLayoutDemo();
     }
 }
