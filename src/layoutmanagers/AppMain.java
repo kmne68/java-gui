@@ -13,13 +13,13 @@ public class AppMain {
     
     public static void main(String[] args) {
         
-        BorderLayoutDemo bld = new BorderLayoutDemo();
+    //    BorderLayoutDemo bld = new BorderLayoutDemo();
         
     //    BoxLayoutDemo boxlayout = new BoxLayoutDemo();
         
     //    CardLayoutDemo cardlayout = new CardLayoutDemo();
         
-    //    FlowLayoutDemo flowlayout = new FlowLayoutDemo();
+        FlowLayoutDemo flowlayout = new FlowLayoutDemo();
         
     }
 }

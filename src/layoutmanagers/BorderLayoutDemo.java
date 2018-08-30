@@ -22,24 +22,10 @@ public class BorderLayoutDemo extends JFrame {
     JButton btnWest;
     JButton btnCenter;
     
-    JPanel pnlNorth;
-    JPanel pnlSouth;
-    
     public BorderLayoutDemo() {
     
         JPanel display = new JPanel(new BorderLayout());
-        
-        pnlNorth = new JPanel();
-        pnlSouth = new JPanel();
-        
 
-        
-        
-        display.add(pnlNorth, BorderLayout.NORTH);
-        display.add(pnlSouth, BorderLayout.SOUTH);
-
-        
-/*
         btnNorth = new JButton("NORTH");
         btnEast = new JButton("EAST");
         btnSouth = new JButton("SOUTH");
@@ -52,9 +38,8 @@ public class BorderLayoutDemo extends JFrame {
         display.add(btnSouth, BorderLayout.SOUTH);
         display.add(btnWest, BorderLayout.WEST);
         display.add(btnCenter, BorderLayout.CENTER);
-*/        
         
-
+        
         // add display to the frame
         add(display);
         

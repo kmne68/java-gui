@@ -28,7 +28,7 @@ public class GameBoard extends JFrame {
         
                 
         GamePanel gamePanel = new GamePanel();
-//        this.add(gamePanel);
+        this.add(gamePanel);
         
         this.setVisible(true);
     }
