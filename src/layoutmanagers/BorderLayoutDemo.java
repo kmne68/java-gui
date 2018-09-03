@@ -22,6 +22,12 @@ public class BorderLayoutDemo extends JFrame {
     JButton btnWest;
     JButton btnCenter;
     
+    JPanel pnlNorth;
+    JPanel pnlEast;
+    JPanel pnlSouth;
+    JPanel pnlWest;
+    JPanel pnlCenter;
+    
     public BorderLayoutDemo() {
     
         JPanel display = new JPanel(new BorderLayout());
@@ -32,12 +38,32 @@ public class BorderLayoutDemo extends JFrame {
         btnWest = new JButton("WEST");
         btnCenter = new JButton("CENTER");
         
+        pnlNorth = new JPanel();        
+        pnlEast = new JPanel();        
+        pnlSouth = new JPanel();        
+        pnlWest = new JPanel();        
+        pnlCenter = new JPanel();
+        
+        pnlNorth.add(btnNorth);
+        pnlEast.add(btnEast);
+        pnlSouth.add(btnSouth);
+        pnlWest.add(btnWest);
+        pnlCenter.add(btnCenter);
+        
+        
         // add controls to each section of the panel
-        display.add(btnNorth, BorderLayout.NORTH);
-        display.add(btnEast, BorderLayout.EAST);
-        display.add(btnSouth, BorderLayout.SOUTH);
-        display.add(btnWest, BorderLayout.WEST);
-        display.add(btnCenter, BorderLayout.CENTER);
+//        display.add(btnNorth, BorderLayout.NORTH);
+//        display.add(btnEast, BorderLayout.EAST);
+//        display.add(btnSouth, BorderLayout.SOUTH);
+//        display.add(btnWest, BorderLayout.WEST);
+//        display.add(btnCenter, BorderLayout.CENTER);
+
+
+    //    display.add(pnlNorth, BorderLayout.NORTH);
+        display.add(pnlEast, BorderLayout.EAST);
+        display.add(pnlSouth, BorderLayout.SOUTH);
+        display.add(pnlWest, BorderLayout.WEST);
+    //    display.add(pnlCenter, BorderLayout.CENTER);
         
         
         // add display to the frame
