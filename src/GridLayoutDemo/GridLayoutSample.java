@@ -4,9 +4,16 @@
  * and open the template in the editor.
  */
 package GridLayoutDemo;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
  
 import java.io.IOException;
 import javafx.application.Application;
+import static javafx.application.Application.launch;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.geometry.VPos;
@@ -42,7 +49,7 @@ import javafx.stage.Stage;
  */
  
  
-public class LayoutSample extends Application {
+public class GridLayoutSample extends Application {
     
  
     /**
@@ -59,12 +66,12 @@ public class LayoutSample extends Application {
 // Use a border pane as the root for scene
         BorderPane border = new BorderPane();
         
-    //    HBox hbox = addHBox();
-    //    border.setTop(hbox);
-    //    border.setLeft(addVBox());
+        HBox hbox = addHBox();
+        border.setTop(hbox);
+        border.setLeft(addVBox());
         
 // Add a stack to the HBox in the top region
-    //    addStackPane(hbox);  
+        addStackPane(hbox);  
         
 // To see only the grid in the center, uncomment the following statement
 // comment out the setCenter() call farther down        
@@ -312,3 +319,4 @@ public class LayoutSample extends Application {
         return anchorpane;
     }
 }
+
