@@ -30,6 +30,7 @@ public class GridBagLayoutDemo {
         pane.setLayout(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
         GridBagConstraints top = new GridBagConstraints();
+        GridBagConstraints gamePanel = new GridBagConstraints();
 
      //   JPanel nextPiece = new JPanel();
 
@@ -38,7 +39,7 @@ public class GridBagLayoutDemo {
         }
 
         JPanel score = new JPanel();
-        score.setPreferredSize(new Dimension(50, 50));
+        score.setPreferredSize(new Dimension(200, 125));
         score.setBorder(BorderFactory.createBevelBorder(0, Color.lightGray, Color.yellow));
         if (shouldWeightX) {
             top.weightx = 0.5;
@@ -49,7 +50,7 @@ public class GridBagLayoutDemo {
         pane.add(score, top);
 
         JPanel graphics = new JPanel();
-        graphics.setPreferredSize(new Dimension(50, 50));
+        graphics.setPreferredSize(new Dimension(200, 125));
         graphics.setBorder(BorderFactory.createBevelBorder(0, Color.black, Color.green));
         if (shouldWeightX) {
             top.weightx = 0.5;
@@ -58,43 +59,31 @@ public class GridBagLayoutDemo {
         top.gridx = 1;
         top.gridy = 0;
         pane.add(graphics, top);
-
+        
+        JPanel game = new JPanel();
+        game.setPreferredSize(new Dimension(400, 600));
+        game.setBorder(BorderFactory.createBevelBorder(0, Color.ORANGE, Color.RED));
         if (shouldFill) {
             //natural height, maximum width
-            c.fill = GridBagConstraints.HORIZONTAL;
+            gamePanel.fill = GridBagConstraints.HORIZONTAL;
         }
-
-//        button = new JButton("Button 1");
-//        if (shouldWeightX) {
-//            c.weightx = 0.5;
-//        }
+        gamePanel.fill = GridBagConstraints.HORIZONTAL;
+        gamePanel.weightx = 0.0;
+        gamePanel.gridwidth = 3;
+        gamePanel.gridx = 0;
+        gamePanel.gridy = 1;
+        pane.add(game, gamePanel);
+        
+        
+        
+//        button = new JButton("Long-Named Button 4");
 //        c.fill = GridBagConstraints.HORIZONTAL;
+//        c.ipady = 40;      //make this component tall
+//        c.weightx = 0.0;
+//        c.gridwidth = 3;
 //        c.gridx = 0;
-//        c.gridy = 0;
+//        c.gridy = 1;
 //        pane.add(button, c);
-//
-//        button = new JButton("Button 2");
-//        c.fill = GridBagConstraints.HORIZONTAL;
-//        c.weightx = 0.5;
-//        c.gridx = 1;
-//        c.gridy = 0;
-//        pane.add(button, c);
-//
-//        button = new JButton("Button 3");
-//        c.fill = GridBagConstraints.HORIZONTAL;
-//        c.weightx = 0.5;
-//        c.gridx = 2;
-//        c.gridy = 0;
-//        pane.add(button, c);
-
-        button = new JButton("Long-Named Button 4");
-        c.fill = GridBagConstraints.HORIZONTAL;
-        c.ipady = 40;      //make this component tall
-        c.weightx = 0.0;
-        c.gridwidth = 3;
-        c.gridx = 0;
-        c.gridy = 1;
-        pane.add(button, c);
 
         button = new JButton("5");
         c.fill = GridBagConstraints.HORIZONTAL;
