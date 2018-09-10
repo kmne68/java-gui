@@ -26,18 +26,20 @@ public class GridBagLayoutDemo {
             pane.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
         }
 
-        JButton button;
+        JButton btnSave;
+        JButton btnQuit;
         pane.setLayout(new GridBagLayout());
-        GridBagConstraints c = new GridBagConstraints();
+        //    GridBagConstraints c = new GridBagConstraints();
         GridBagConstraints top = new GridBagConstraints();
         GridBagConstraints gamePanel = new GridBagConstraints();
+        GridBagConstraints footer = new GridBagConstraints();
 
-     //   JPanel nextPiece = new JPanel();
-
+        //   JPanel nextPiece = new JPanel();
         if (shouldFill) {
             top.fill = GridBagConstraints.HORIZONTAL;
         }
 
+        // Score panel (displays score)
         JPanel score = new JPanel();
         score.setPreferredSize(new Dimension(200, 125));
         score.setBorder(BorderFactory.createBevelBorder(0, Color.lightGray, Color.yellow));
@@ -49,6 +51,7 @@ public class GridBagLayoutDemo {
         top.gridy = 0;
         pane.add(score, top);
 
+        // Graphics panel (displays next piece)
         JPanel graphics = new JPanel();
         graphics.setPreferredSize(new Dimension(200, 125));
         graphics.setBorder(BorderFactory.createBevelBorder(0, Color.black, Color.green));
@@ -59,7 +62,8 @@ public class GridBagLayoutDemo {
         top.gridx = 1;
         top.gridy = 0;
         pane.add(graphics, top);
-        
+
+        // Game panel
         JPanel game = new JPanel();
         game.setPreferredSize(new Dimension(400, 600));
         game.setBorder(BorderFactory.createBevelBorder(0, Color.ORANGE, Color.RED));
@@ -73,28 +77,31 @@ public class GridBagLayoutDemo {
         gamePanel.gridx = 0;
         gamePanel.gridy = 1;
         pane.add(game, gamePanel);
-        
-        
-        
-//        button = new JButton("Long-Named Button 4");
-//        c.fill = GridBagConstraints.HORIZONTAL;
-//        c.ipady = 40;      //make this component tall
-//        c.weightx = 0.0;
-//        c.gridwidth = 3;
-//        c.gridx = 0;
-//        c.gridy = 1;
-//        pane.add(button, c);
 
-        button = new JButton("5");
-        c.fill = GridBagConstraints.HORIZONTAL;
-        c.ipady = 0;       //reset to default
-        c.weighty = 1.0;   //request any extra vertical space
-        c.anchor = GridBagConstraints.PAGE_END; //bottom of space
-        c.insets = new Insets(10, 0, 0, 0);  //top padding
-        c.gridx = 1;       //aligned with button 2
-        c.gridwidth = 2;   //2 columns wide
-        c.gridy = 2;       //third row
-        pane.add(button, c);
+        // Buttons panel
+        btnSave = new JButton("Save");
+        btnQuit = new JButton("Quit");
+        
+        if (shouldFill) {
+            footer.fill = GridBagConstraints.HORIZONTAL;
+        }
+        
+        JPanel buttons = new JPanel();
+        buttons.setPreferredSize(new Dimension(400, 125));
+        buttons.setBorder(BorderFactory.createBevelBorder(0, Color.magenta, Color.cyan));
+
+        footer.gridx = 0;
+        footer.gridy = 2;
+        footer.ipady = 0;
+        footer.weightx = 0.0;
+        footer.weighty = 1.0;
+        footer.gridwidth = 2;
+
+        
+        pane.add(buttons, footer);
+        buttons.add(btnSave);
+        buttons.add(btnQuit);
+         
     }
 
     /**
